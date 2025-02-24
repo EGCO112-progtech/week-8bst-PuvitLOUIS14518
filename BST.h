@@ -87,3 +87,50 @@ void inOrder( TreeNodePtr treePtr )
       inOrder( treePtr->rightPtr ); //Recursion to the right
    } // end if                          
 } // end 
+
+void treeside ( TreeNodePtr treePtr,int line )
+{ 
+   // if tree is not empty, then traverse
+   if ( treePtr == NULL ) { return; }       
+      
+      treeside( treePtr->rightPtr, line+1 ); //Recursion to the right
+      
+      for(int i=0;i<line;i++) { printf("       ");}
+ 
+      printf("%3d \n ",treePtr->data) ;  //print the value 
+      
+      treeside( treePtr->leftPtr,line+1 ); //Recursion to the left
+
+
+   } // end if                          
+ // end 
+
+
+
+void preOrder( TreeNodePtr treePtr )
+{ 
+   // if tree is not empty, then traverse
+   if ( treePtr != NULL ) {        
+      
+      printf("%3d",treePtr->data) ;  //print the value
+      
+      preOrder( treePtr->leftPtr ); //Recursion to the left
+ 
+      preOrder( treePtr->rightPtr ); //Recursion to the right
+   } // end if                          
+} // end 
+void postOrder( TreeNodePtr treePtr )
+{ 
+   // if tree is not empty, then traverse
+   if ( treePtr != NULL ) {        
+      
+      
+      
+      postOrder( treePtr->leftPtr ); //Recursion to the left
+ 
+      postOrder( treePtr->rightPtr ); //Recursion to the right
+
+      printf("%3d",treePtr->data) ;  //print the value
+      
+   } // end if                          
+} // end 
