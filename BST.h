@@ -95,7 +95,7 @@ void treeside ( TreeNodePtr treePtr,int line )
       
       treeside( treePtr->rightPtr, line+1 ); //Recursion to the right
       
-      for(int i=0;i<line;i++) { printf("       ");}
+      for(int i=0;i<line;i++) { printf("   ");}
  
       printf("%3d \n ",treePtr->data) ;  //print the value 
       
